@@ -1,0 +1,27 @@
+[project]
+name = "history-ai-backend"
+version = "0.1.0"
+description = "The backend for the History AI Wiki application."
+authors = ["Amir Abdallah  <amirabdallahpfe@gmail.com>"]
+readme = "README.md"
+requires-python = ">=3.9" 
+
+dependencies = [
+ "fastapi",
+ "uvicorn[standard]",
+ "sqlalchemy",
+ "psycopg2-binary",
+ "pydantic",
+ "pydantic-settings",
+ "python-dotenv",
+ "python-multipart",
+ "google-genai",
+ "PyMuPDF",
+ "alembic"
+] 
+
+[tool.uv]
+dev-dependencies = [
+ "pytest",
+ "httpx"
+]
