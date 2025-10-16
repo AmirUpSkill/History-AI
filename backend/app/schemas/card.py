@@ -1,6 +1,6 @@
 from uuid import UUID 
 from typing import List 
-from pydantic import BaseModel , Field 
+from pydantic import BaseModel, Field, ConfigDict
 
 # --- Create Base Card Schema --- 
 class CardBase(BaseModel):
@@ -22,5 +22,4 @@ class CardResponse(CardBase):
         Card Response Schema . 
     """
     id: UUID 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

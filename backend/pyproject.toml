@@ -25,3 +25,8 @@ dev-dependencies = [
  "pytest",
  "httpx"
 ]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
