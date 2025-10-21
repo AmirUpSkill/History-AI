@@ -66,7 +66,7 @@ class CardCRUD:
         db_card = Card(
             title=card_in.title,
             description=card_in.description,
-            content=card_in.keywords
+            keywords=card_in.keywords
         )
         # --- Add to Session and Commit --- 
         db.add(db_card)
