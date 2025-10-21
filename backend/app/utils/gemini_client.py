@@ -33,11 +33,10 @@ class GeminiClient:
         if not api_key:
             raise GeminiClientError("GEMINI_API_KEY is not set")
         
-        genai.configure(api_key=api_key)
-        self.client = genai.Client()
+        self.client = genai.Client(api_key=api_key)
         self.model_name = model_name
         self.max_retries = 3
-        self.retry_delay = 1  
+        self.retry_delay = 1
     
     def call_with_retry(self, prompt: str) -> str:
         """
