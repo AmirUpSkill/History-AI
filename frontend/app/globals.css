@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-radius-sm: calc(var(--radius) - 4px);
+  --color-radius-md: calc(var(--radius) - 2px);
+  --color-radius-lg: var(--radius);
+  --color-radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Light Mode - AI Wiki Color Palette (Default) */
+:root {
+  --radius: 0.625rem;
+  
+  /* Primary Colors */
+  --teal: hsl(193 57% 27%);           /* #1B5E6E - Teal */
+  --cream: hsl(40 38% 93%);           /* #F5F1E8 - Cream */
+  --soft-blue: hsl(195 56% 78%);      /* #A8D8E8 - Soft Blue */
+  --warm-orange: hsl(19 74% 64%);     /* #E8845C - Warm Orange */
+  
+  /* Accent Colors */
+  --coral: hsl(19 62% 57%);           /* #D97548 - Coral */
+  --salmon: hsl(19 83% 74%);          /* #F4A583 - Salmon */
+  --light-peach: hsl(19 63% 88%);     /* #F5D5CC - Light Peach */
+  --sage-green: hsl(136 24% 52%);     /* #6B9E7C - Sage Green */
+  --lavender: hsl(258 82% 87%);       /* #D4C5F9 - Lavender */
+  --light-yellow: hsl(40 63% 87%);    /* #F5E6C8 - Light Yellow */
+  
+  /* Semantic Tokens */
+  --background: var(--cream);                    /* Cream */
+  --foreground: var(--teal);                     /* Teal */
+  --card: hsl(40 38% 98%);                       /* Off-white cream */
+  --card-foreground: var(--teal);                /* Teal */
+  --popover: hsl(40 38% 98%);                    /* Off-white cream */
+  --popover-foreground: var(--teal);             /* Teal */
+  --primary: var(--teal);                        /* Teal */
+  --primary-foreground: var(--cream);            /* Cream */
+  --secondary: var(--soft-blue);                 /* Soft Blue */
+  --secondary-foreground: var(--teal);           /* Teal */
+  --muted: hsl(40 38% 85%);                      /* Light cream */
+  --muted-foreground: var(--teal);               /* Teal */
+  --accent: var(--warm-orange);                  /* Warm Orange */
+  --accent-foreground: hsl(0 0% 100%);           /* White */
+  --destructive: hsl(0 84.2% 60.2%);             /* Red */
+  --border: hsl(40 38% 88%);                     /* Light cream */
+  --input: hsl(40 38% 95%);                      /* Very light cream */
+  --ring: var(--soft-blue);                      /* Soft Blue */
+  --chart-1: var(--warm-orange);                 /* Warm Orange */
+  --chart-2: var(--teal);                        /* Teal */
+  --chart-3: var(--sage-green);                  /* Sage Green */
+  --chart-4: var(--coral);                       /* Coral */
+  --chart-5: var(--salmon);                      /* Salmon */
+  --sidebar: var(--cream);                       /* Cream */
+  --sidebar-foreground: var(--teal);             /* Teal */
+  --sidebar-primary: var(--teal);                /* Teal */
+  --sidebar-primary-foreground: var(--cream);    /* Cream */
+  --sidebar-accent: var(--warm-orange);          /* Warm Orange */
+  --sidebar-accent-foreground: hsl(0 0% 100%);   /* White */
+  --sidebar-border: hsl(40 38% 88%);             /* Light cream */
+  --sidebar-ring: var(--soft-blue);              /* Soft Blue */
+}
+
+/* Dark Mode - AI Wiki Color Palette Adapted */
+.dark {
+  /* Primary Colors - Inverted */
+  --teal: hsl(193 57% 27%);           /* #1B5E6E - Teal (slightly adjusted for dark) */
+  --cream: hsl(40 38% 93%);           /* #F5F1E8 - Cream (used as accent in dark) */
+  --soft-blue: hsl(195 56% 78%);      /* #A8D8E8 - Soft Blue */
+  --warm-orange: hsl(19 74% 64%);     /* #E8845C - Warm Orange */
+  
+  /* Semantic Tokens - Dark Mode */
+  --background: hsl(193 40% 20%);                /* Deep teal-dark background */
+  --foreground: var(--cream);                    /* Cream text */
+  --card: hsl(193 45% 25%);                      /* Slightly lighter teal-dark */
+  --card-foreground: var(--cream);               /* Cream */
+  --popover: hsl(193 45% 25%);                   /* Slightly lighter teal-dark */
+  --popover-foreground: var(--cream);            /* Cream */
+  --primary: var(--soft-blue);                   /* Soft Blue for better contrast */
+  --primary-foreground: hsl(193 40% 20%);        /* Deep teal-dark */
+  --secondary: var(--warm-orange);               /* Warm Orange */
+  --secondary-foreground: var(--cream);          /* Cream */
+  --muted: hsl(193 35% 30%);                     /* Medium teal-dark */
+  --muted-foreground: hsl(40 38% 75%);           /* Muted cream */
+  --accent: var(--warm-orange);                  /* Warm Orange */
+  --accent-foreground: hsl(193 40% 20%);         /* Deep teal-dark */
+  --destructive: hsl(0 84.2% 60.2%);             /* Red */
+  --border: hsl(193 35% 35%);                    /* Medium teal-dark */
+  --input: hsl(193 40% 28%);                     /* Dark input background */
+  --ring: var(--soft-blue);                      /* Soft Blue */
+  --chart-1: var(--warm-orange);                 /* Warm Orange */
+  --chart-2: var(--soft-blue);                   /* Soft Blue */
+  --chart-3: var(--sage-green);                  /* Sage Green */
+  --chart-4: var(--salmon);                      /* Salmon */
+  --chart-5: var(--coral);                       /* Coral */
+  --sidebar: hsl(193 40% 22%);                   /* Dark teal */
+  --sidebar-foreground: var(--cream);            /* Cream */
+  --sidebar-primary: var(--soft-blue);           /* Soft Blue */
+  --sidebar-primary-foreground: hsl(193 40% 20%);/* Deep teal-dark */
+  --sidebar-accent: var(--warm-orange);          /* Warm Orange */
+  --sidebar-accent-foreground: hsl(193 40% 20%); /* Deep teal-dark */
+  --sidebar-border: hsl(193 35% 35%);            /* Medium teal-dark */
+  --sidebar-ring: var(--soft-blue);              /* Soft Blue */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
