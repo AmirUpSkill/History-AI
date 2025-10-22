@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { useAppStore } from "@/store/app-store"
 import { SearchPanel } from "@/components/layout/search-panel"
 import { CardGrid } from "@/components/layout/card-grid"
+import { AddCardDialog } from "@/components/cards/add-card-dialog"
 
 export default function HomePage() {
   const { cards, isLoading, error, fetchCards } = useAppStore()
@@ -35,6 +36,9 @@ export default function HomePage() {
         error={error}
         onRetry={() => fetchCards()}
       />
+
+      {/* --- Add Card Dialog --- */}
+      <AddCardDialog />
     </div>
   )
 }

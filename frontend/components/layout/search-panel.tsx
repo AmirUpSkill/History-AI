@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Search, Plus } from "lucide-react"
-import { toast } from "sonner"
+import { useAppStore } from "@/store/app-store"
 
 interface SearchPanelProps {
   onSearch: (query?: string) => void
@@ -11,6 +11,7 @@ interface SearchPanelProps {
 export function SearchPanel({ onSearch }: SearchPanelProps) {
   const [searchTerm, setSearchTerm] = useState("")
   const [isFocused, setIsFocused] = useState(false)
+  const { openAddCardDialog } = useAppStore()
 
   useEffect(() => {
     const timer = setTimeout(() => onSearch(searchTerm || undefined), 300)
@@ -32,7 +33,7 @@ export function SearchPanel({ onSearch }: SearchPanelProps) {
           aria-label="Search cards"
         />
         <button
-          onClick={() => toast.info("Add card feature coming soon!")}
+          onClick={openAddCardDialog}
           className="flex items-center justify-center gap-2 px-6 h-12 rounded-2xl bg-accent hover:bg-accent/90 text-white font-semibold text-sm shadow-[0_4px_12px_rgba(232,132,92,0.3)] hover:shadow-[0_6px_16px_rgba(232,132,92,0.4)] transform transition-all duration-200 ease-out hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
         >
           <Plus className="h-5 w-5" />
